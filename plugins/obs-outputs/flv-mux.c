@@ -140,7 +140,7 @@ bool flv_meta_data(obs_output_t *context, uint8_t **output, size_t *size,
 
 	array_output_serializer_init(&s, &data);
 
-	if (build_flv_meta_data(context, &meta_data, &meta_data_size,
+	if (!build_flv_meta_data(context, &meta_data, &meta_data_size,
 				audio_idx)) {
 		bfree(meta_data);
 		return false;
